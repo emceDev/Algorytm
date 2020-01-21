@@ -13,8 +13,8 @@ class Algorytm extends React.Component {
       tak = () => {
         if(this.state.step=="3"){
             this.setState({step:"4",question:"Reaguj!!!"});
-        
-      }else{
+      }
+      else{
         this.setState({step:"1",question:"wzywasz zespół i co dalej?"});    
       }}
       nie = () => {
@@ -38,7 +38,7 @@ class Algorytm extends React.Component {
       }
       wznowRKO = () => {
         if(this.state.step=="5"){
-            this.setState({step: "0",question:"Kocham Cię Aniu :* :)",rko:"success"});
+            this.setState({step: "0",question:"Kocham Cię Aniu :*. Ale pacjent Nie reaguje i nie oddycha prawidłowo?",rko:"success"});
         }
       }
       
@@ -50,7 +50,7 @@ class Algorytm extends React.Component {
     return (
       <div>
         <div>
-        <h1>{this.state.question}</h1>
+        <p style={{height:"20vh", fontSize:"auto"}}>{this.state.question}</p>
         <Button variant="primary" onClick={this.tak}>tak</Button>
         <Button variant="primary" onClick={this.nie}>nie</Button>
         </div>
